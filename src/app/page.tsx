@@ -1,6 +1,5 @@
 import Image from "next/image"
-import facebook from "../app/images/fb-removebg-preview.png"
-
+import facebook from "../images/fb-removebg-preview.png"
 
 const Home = () => {
   return (
