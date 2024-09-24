@@ -1,101 +1,51 @@
-import Image from "next/image";
+import Image from "next/image"
+import facebook from "../app/images/fb-removebg-preview.png"
 
-export default function Home() {
+
+const Home = () => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div>
+     
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+    <div className="container pt-[80px] flex justify-center items-center mx-auto w-[710] h-[540px] ">
+      
+      <div className="w-1/3 mb-32 mr-28">
+      
+      <Image src={facebook} alt="facebook-logo" className="w-80 flex line-clamp-2 "/>
+      <p className="font-medium text-[24px]  ">Facebook helps you connect and share with the people in your life.</p>
+      
+      </div>
+
+      
+
+      <div className="flex flex-col bg-white h-[355px] w-[396px] rounded-lg items-center py-3 shadow-xl shadow-gray-300 relative" >
+
+         <input type="text" placeholder= "Email address or Phone number" className="h-[55px] my-2 w-[360px] border-gray-300 border rounded-md pl-3  shadow-md shadow-gray-100 outline-blue-400 " />
+         <input type="password" placeholder= "Password" className="h-[55px] my-2 w-[360px]  border-gray-300 border rounded-md pl-3 shadow-md shadow-gray-100 outline-blue-600 " />
+         <button className="bg-blue-600 hover:bg-blue-700 w-[350px]  h-[48px] text-white font-bold  my-2 rounded-md ">Log In</button>
+         <span className="text-blue-600 hover:underline">Forgetten password?</span>
+
+         <hr className="w-[90%] border-t border-gray-300 my-4 mt-6" />
+
+         <button className="bg-[#42B72A] hover:bg-[#3dae26] font-bold h-12 w-44 text-white rounded-md py-3 ">Create new account </button>
+        <span className="absolute -bottom-10 text-sm flex flex-wrap "> <p className="font-semibold mr-[4px] hover:underline "> Create a Page</p> for a celebrity, brand or business.</span>
+         
+         
+
+      </div>
+
+      
+
+
     </div>
-  );
+
+    
+ 
+
+  
+ 
+  </div>
+  )
 }
+
+export default Home
